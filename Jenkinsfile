@@ -34,10 +34,10 @@ podTemplate(
             REPOS = checkout scm
             GIT_BRANCH = REPOS.GIT_BRANCH
             //com base no branch, direciona ao ambiente correto
-            if(GIT_BRANCH.equals("origin/master")) {
+            if(GIT_BRANCH.equals("master")) {
                KUBE_NAMESPACE = "prod"
                ENVIRONMENT = "production"
-            } else if(GIT_BRANCH.equals("origin/develop")) {
+            } else if(GIT_BRANCH.equals("develop")) {
                KUBE_NAMESPACE = "staging"
                ENVIRONMENT = "staging"
                IMAGE_POSFIX = "-RC"
